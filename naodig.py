@@ -74,7 +74,7 @@ class NaoCvML:
         M = cv2.getPerspectiveTransform(pnts1, pnts2)
         dst = cv2.warpPerspective(mask, M, (300,300))
         ret, fin = cv2.threshold(dst, 100, 255, cv2.THRESH_BINARY)
-        resized_image = cv2.resize(fin, (20, 20))
+        resized_image = cv2.resize(fin, (28, 28))
 
         cv2.imwrite("nao-top-camera-320x240-snap_e.png", gray1)
         cv2.imwrite("nao-top-camera-320x240-snap_e2.png", gray2)
